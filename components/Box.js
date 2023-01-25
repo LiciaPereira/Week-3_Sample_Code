@@ -23,13 +23,13 @@ const Box = (props) => {
 };
 
 export default (world, color, pos, size) => {
-  const theBox = Matter.Bodies.rectangle(
+  const box = Matter.Bodies.rectangle(
     pos.x,
     pos.y,
     size.width,
     size.height,
-    { label: 'Box', frictionAir: 0, friction: 0 }
+    { label: 'Box', frictionAir: 0, friction: 0 } 
   );
-  Matter.World.add(world, theBox);
-  return { body: theBox, color, pos, renderer: <Box /> };
+  Matter.World.add(world, box);
+  return { body: box, color, pos, renderer: <Box /> };
 };

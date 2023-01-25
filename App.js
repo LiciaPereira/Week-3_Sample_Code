@@ -29,5 +29,11 @@ const styles = StyleSheet.create({
     backgroundColor: '#ecf0f1',
     padding: 8,
   },
-  
+  gameContainer: {
+    position: "absolute",
+    left: 0,
+    top: 0, 
+    right: 0,
+    bottom: 0,
+  },
 });

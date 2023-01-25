@@ -23,13 +23,13 @@ const Ground = (props) => {
 };
 
 export default (world, color, pos, size) => {
-  const theGround = Matter.Bodies.rectangle(
+  const ground = Matter.Bodies.rectangle(
     pos.x,
     pos.y,
     size.width,
     size.height,
-    { label: 'Ground', frictionAir: 0, friction: 0 }
+    { label: 'Ground', frictionAir: 0, friction: 0, isStatic: true }
   );
-  Matter.World.add(world, theGround);
-  return { body: theGround, color, pos, renderer: <Ground /> };
+  Matter.World.add(world, ground);
+  return { body: ground, color, pos, renderer: <Ground /> };
 };
